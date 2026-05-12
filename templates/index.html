@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Security Dashboard</title>
+
+    <style>
+
+        body{
+            background:#0f172a;
+            color:white;
+            font-family:Arial;
+            text-align:center;
+        }
+
+        h1{
+            color:#00ff99;
+        }
+
+        .box{
+            border:2px solid #00ff99;
+            padding:20px;
+            margin:20px;
+            border-radius:10px;
+            background:#1e293b;
+        }
+
+        img{
+            width:80%;
+            border:4px solid #00ff99;
+            border-radius:10px;
+        }
+
+        .status{
+            font-size:24px;
+            margin-top:10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>AI SMART CCTV SECURITY SYSTEM</h1>
+
+    <div class="box">
+
+        <img src="{{ url_for('video_feed') }}">
+
+        <div class="status">
+
+            <p>Live Status: {{status}}</p>
+
+            <p>Threat Level: {{threat}}</p>
+
+            <p>Intruder Count: {{count}}</p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
